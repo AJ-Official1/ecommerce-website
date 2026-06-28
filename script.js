@@ -9,7 +9,7 @@ const myPythonLibrary = [
     },
     {
         title: "10 Cool Text and Visual Effects", 
-        description: "A collection of beautiful terminal text animations, color gradients, and loading effects for your command line tools.", 
+        description: "A collection of beautiful terminal text animations, color gradients, and loading effects for your command line to", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/10_cool_effects.py" 
