@@ -8,11 +8,11 @@ const myPythonLibrary = [
         fileLocation: "pyzone-marketplace/offline_AI.py" 
     },
     {
-        title: "10 Cool Text and Visual Effects", 
+        title: "Rock, Paper and Scissors", 
         description: "A collection of beautiful terminal text animations, color gradients, and loading effects for your command line tools.", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
-        fileLocation: "pyzone-marketplace/10_cool_effects.py" 
+        fileLocation: "pyzone-marketplace/rock pap.py" 
     },
         {
         title: "10 Cool Text and Visual Effects", 
