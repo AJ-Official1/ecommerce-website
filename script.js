@@ -9,14 +9,14 @@ const myPythonLibrary = [
     },
     {
         title: "10 Cool Text and Visual Effects", 
-        description: "A collection of beautiful terminal text animations, color gradients, and loading effects for your command line to", 
+        description: "Rock, Paper, Scissors is a classic two-player hand game where players simultaneously form shapes representing rock, paper, or scissors to determine a winner based on a simple three-rule hierarchy.", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/10_cool_effects.py" 
     },
         {
         title: "Rock, Paper and Scissors", 
-        description: "Rock Paper Scissors is a simple, two-player hand game of chance and strategy. Players simultaneously form one of three hand shapes", 
+        description: "", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
