@@ -16,7 +16,7 @@ const myPythonLibrary = [
     },
         {
         title: "Rock, Paper and Scissors", 
-        description: "", 
+        description: "Rock Paper Scissors is a simple, two-player hand game of chance and strategy. Players simultaneously form one of three hand shapes", 
         installGuide: "pip install pygame", 
         photoUrl: "RPS.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
