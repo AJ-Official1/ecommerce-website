@@ -16,7 +16,7 @@ const myPythonLibrary = [
     },
         {
         title: "Rock, Paper and Scissors", 
-        description: "A collection of beautiful terminal text animations, color gradients, and loading effects for your command line tools.", 
+        description: "Rock Paper Scissors is a simple, zero-sum hand game usually played between two people. Players simultaneously form one of three shapes with their hands—Rock (a fist), Paper (a flat hand), or Scissors (two fingers extended)—to determine a winner based on a set hierarchy.", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
