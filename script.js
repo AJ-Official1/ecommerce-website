@@ -16,7 +16,7 @@ const myPythonLibrary = [
     },
         {
         title: "Rock, Paper and Scissors", 
-        description: "Rock Paper Scissors is a simple, zero-sum hand game usually played between two people. Players simultaneously form one of three shapes with their hands—Rock (a fist), Paper (a flat hand), or Scissors (two fingers extended)—to determine a winner based on a set hierarchy.", 
+        description: "Rock Paper Scissors is a simple, two-player hand game of chance and strategy. Players simultaneously form one of three hand shapes", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
