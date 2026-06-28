@@ -1,0 +1,186 @@
+/* Core Structural Adjustments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body.amazon-dark {
+    background-color: #1a1d20; 
+    color: #eaeded;
+}
+
+/* Amazon Dark Header Bar Styling */
+.amazon-header {
+    background-color: #131921; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.header-logo span {
+    color: #ff9900; 
+    font-size: 15px;
+}
+
+.header-search {
+    display: flex;
+    flex: 1;
+    max-width: 700px;
+    margin: 0 30px;
+}
+
+.header-search input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.header-search .search-icon-btn {
+    background-color: #febd69;
+    border: none;
+    width: 45px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header-search .search-icon-btn:hover {
+    background-color: #f3a847;
+}
+
+.header-right-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Page Layout */
+.main-container {
+    padding: 30px 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3a3f45;
+    padding-bottom: 10px;
+}
+
+/* Grid Layout for Cards */
+.products-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Amazon Style Showcase Card */
+.amazon-product-card {
+    background-color: #232f3e; 
+    border: 1px solid #3a3f45;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease;
+}
+
+.amazon-product-card:hover {
+    transform: scale(1.02);
+    border-color: #ff9900;
+}
+
+/* Picture Image Layout container */
+.card-image-box {
+    width: 100%;
+    height: 200px;
+    background-color: #1a1d20;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Information Layouts */
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 12px;
+    color: #bdc4c9;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Terminal installation setup container */
+.install-box {
+    background-color: #131921;
+    border: 1px solid #3a3f45;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: #ffd814;
+    display: block;
+    word-break: break-all;
+}
+
+/* Yellow Amazon Download Call To Action Button */
+.amazon-download-button {
+    background-color: #ffd814;
+    border: 1px solid #fcd200;
+    color: #0f1111;
+    width: 100%;
+    padding: 9px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.1s ease;
+}
+
+.amazon-download-button:hover {
+    background-color: #f7ca00;
+}
