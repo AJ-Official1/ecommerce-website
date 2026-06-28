@@ -18,7 +18,7 @@ const myPythonLibrary = [
         title: "Rock, Paper and Scissors", 
         description: "", 
         installGuide: "pip install pygame", 
-        photoUrl: "cool_effects.jpg", 
+        photoUrl: "RPS.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
     }
 ];
