@@ -9,7 +9,7 @@ const myPythonLibrary = [
     },
     {
         title: "10 Cool Text and Visual Effects", 
-        description: "The old map crinkled under Clara’s fingers. For years, she had searched for the Whispering Grove, a mythical forest rumored to hold the secrets of forgotten stars. Lantern light flickered against the ancient trees as she stepped past the mossy stone gates. Suddenly, the canopy overhead began to glow. Soft, silver leaves hummed a gentle melody that echoed through the quiet night. A glowing trail appeared on the forest floor, guiding her deeper into the woods. Clara smiled, took a deep breath, and followed the light. Her long journey was finally over, and the adventure was just beginning.", 
+        description: "Suggest a font combination for this sentence Provide a longer definition of design Show how to style this text using CSS", 
         installGuide: "pip install pygame", 
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/10_cool_effects.py" 
