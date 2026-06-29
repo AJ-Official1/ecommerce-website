@@ -17,17 +17,10 @@ body.amazon-dark {
     padding: 40px;
     max-width: 1400px;
     margin: 0 auto;
-    display: block !important;
 }
 
 .main-container.hidden {
     display: none !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    border: none !important;
-    box-shadow: none !important;
 }
 
 /* High-tech Entrance Animation */
@@ -207,7 +200,7 @@ body.amazon-dark {
     border-radius: 4px;
 }
 
-/* Clean title wrap section structures with no custom layout box borders */
+/* Clean section header configurations */
 .clean-section-header {
     margin-bottom: 30px;
     display: block;
@@ -250,6 +243,17 @@ body.amazon-dark {
     align-items: center;
     justify-content: center;
     border: 1px solid #161f30;
+    position: relative;
+}
+
+.card-image-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffff, #9d4edd);
 }
 
 .card-image-box img {
