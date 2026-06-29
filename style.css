@@ -109,7 +109,6 @@ body.amazon-dark {
     align-items: center;
 }
 
-/* Hard visibility layout classes to hide the empty outline container on about me paths */
 .header-search.hidden-search {
     display: none !important;
 }
@@ -227,18 +226,10 @@ body.amazon-dark {
     margin: 0 auto;
 }
 
-.section-title-wrap {
+/* SOLID HEADING LAYOUT OBJECTS - REMOVED STRAY LINE ATTRIBUTES FROM ENTIRE ARCHITECTURE */
+.clean-section-header {
     margin-bottom: 30px;
-    display: inline-block;
-    border-bottom: 2px solid #161f30;
-    padding-bottom: 12px;
-}
-
-.section-title-wrap.heading-fix {
     display: block;
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 15px;
 }
 
 .section-heading {
@@ -386,13 +377,14 @@ body.amazon-dark {
     display: block;
 }
 
+/* COMPREHENSIVE TEXT MASK FIX PREVENTS SOLID PINK BLOCKS ON COMPUTER CHIPS */
 .about-me-heading .gradient-text {
     display: inline-block;
     background: linear-gradient(135deg, #ff007f, #9d4edd);
+    background-clip: text !important;
     -webkit-background-clip: text !important;
+    color: transparent !important;
     -webkit-text-fill-color: transparent !important;
-    background-clip: text;
-    color: transparent;
 }
 
 .developer-display-name {
