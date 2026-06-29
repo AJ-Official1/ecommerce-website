@@ -222,12 +222,16 @@ body.amazon-dark {
     margin: 0 auto;
 }
 
+.section-title-wrap {
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 2px solid #161f30;
+    padding-bottom: 12px;
+}
+
 .section-heading {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #161f30;
-    padding-bottom: 12px;
     letter-spacing: 0.5px;
     background: linear-gradient(90deg, #ffffff, #8292a6);
     -webkit-background-clip: text;
@@ -366,7 +370,7 @@ body.amazon-dark {
     font-size: 42px;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
