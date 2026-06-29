@@ -1,4 +1,4 @@
-// Database Source Repository list tracking arrays
+// Database Source Repository arrays lists tracking records
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -52,7 +52,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard grid card components
+// Injects standard marketplace display structures into display blocks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -64,7 +64,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     }
 
     if (currentItems.length === 0) {
-        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px;">No records located.</p>';
+        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px;">No matching records located.</p>';
         return;
     }
 
@@ -123,10 +123,10 @@ function setupSearch() {
 }
 
 function setupInfiniteScroll() {
-    window.addEventListener('scroll', () => {
-        const homeContainer = document.getElementById('homeViewContainer');
-        if (homeContainer && homeContainer.classList.contains('hidden')) return;
+    const homeContainer = document.getElementById('homeViewContainer');
+    if (homeContainer && homeContainer.classList.contains('hidden')) return;
 
+    window.addEventListener('scroll', () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
             const catalogGrid = document.getElementById('catalog-grid');
             if (catalogGrid && catalogGrid.children.length < currentItems.length) {
@@ -136,7 +136,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// SECURE EVENT HANDLERS EXPLICITLY BINDS TO CORRECT ID PATH STRINGS
+// Master single page viewport tab layout panel switches logic controls
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -167,6 +167,7 @@ function setupSinglePageNavigation() {
     const navHome = document.getElementById('navHomeLink');
     const navAbout = document.getElementById('navAboutLink');
     const logoBtn = document.getElementById('headerLogoBtn');
+    const aboutHomeShortcut = document.getElementById('aboutHomeShortcut');
 
     if (navHome) {
         navHome.addEventListener('click', function(e) {
@@ -184,6 +185,14 @@ function setupSinglePageNavigation() {
 
     if (logoBtn) {
         logoBtn.addEventListener('click', function() {
+            switchToHomeView();
+        });
+    }
+
+    // Binds the new profile view third home action badge item to clear screen filters
+    if (aboutHomeShortcut) {
+        aboutHomeShortcut.addEventListener('click', function(e) {
+            e.preventDefault();
             switchToHomeView();
         });
     }
