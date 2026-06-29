@@ -21,14 +21,7 @@ body.amazon-dark {
     padding: 0 20px;
     position: sticky;
     top: 0;
-    z-index: 100;
-}
-
-/* Left container combining Logo and Links */
-.logo-nav-container {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    z-index: 101;
 }
 
 .header-logo {
@@ -43,38 +36,10 @@ body.amazon-dark {
     font-size: 15px;
 }
 
-/* Navigation Links styling */
-.header-nav-links {
-    display: flex;
-    gap: 5px;
-}
-
-.nav-link {
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    transition: all 0.1s ease;
-}
-
-/* Amazon style outline box on hover */
-.nav-link:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-}
-
-.nav-link.active {
-    color: #ff9900; /* Matches Amazon orange */
-}
-
-/* Search bar scaling */
 .header-search {
     display: flex;
     flex: 1;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 30px;
 }
 
@@ -107,7 +72,39 @@ body.amazon-dark {
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
-    white-space: nowrap;
+}
+
+/* Amazon Sub-Navigation Bar Layout */
+.amazon-sub-nav {
+    background-color: #232f3e;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 15px;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.sub-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.sub-nav-link:hover {
+    border: 1px solid #ffffff;
+}
+
+.sub-nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid #ff9900;
+    border-radius: 0;
 }
 
 /* Page Layout */
@@ -221,21 +218,19 @@ body.amazon-dark {
     background-color: #f7ca00;
 }
 
-/* About Developer Section styling */
+/* About Developer Layout block update */
 .developer-section {
     margin-top: 60px;
-    padding-top: 10px;
 }
 
 .developer-card {
     display: flex;
-    background-color: #232f3e; /* Matches product card background */
+    background-color: #232f3e;
     border: 1px solid #3a3f45;
     border-radius: 4px;
-    padding: 25px;
-    gap: 25px;
-    max-width: 800px;
-    margin-top: 20px;
+    padding: 30px;
+    gap: 30px;
+    width: 100%;
     align-items: center;
 }
 
@@ -244,37 +239,35 @@ body.amazon-dark {
 }
 
 .developer-image {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #febd69;
+    border: 2px solid #ff9900;
+    background-color: #131921;
 }
 
 .developer-info {
-    color: #ffffff;
+    flex: 1;
 }
 
 .developer-name {
-    margin: 0 0 10px 0;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 700;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .developer-description {
-    margin: 0;
-    line-height: 1.6;
-    color: #bdc4c9;
     font-size: 14px;
+    line-height: 1.6;
+    color: #eaeded;
 }
 
-/* Responsive adjustment for small screens */
-@media (max-width: 768px) {
+/* Fallback breakpoint for smaller tablet viewport scales */
+@media (max-width: 650px) {
     .developer-card {
         flex-direction: column;
         text-align: center;
-    }
-    .logo-nav-container {
-        gap: 10px;
     }
 }
