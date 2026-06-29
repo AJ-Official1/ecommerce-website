@@ -24,7 +24,7 @@ body.amazon-dark {
     display: none !important;
 }
 
-/* Header Framework layout */
+/* Header Framework styles layout configurations */
 .amazon-header {
     background-color: #090d16; 
     height: 60px;
@@ -117,7 +117,7 @@ body.amazon-dark {
     flex-shrink: 0;
 }
 
-/* Clean, Non-Collapsing Sub-Navigation Menu Bar layout */
+/* Subnavigation Menu navigation block layout configurations */
 .amazon-sub-nav {
     background-color: #0b0f19;
     padding: 10px 20px;
@@ -171,7 +171,7 @@ body.amazon-dark {
     color: #ffffff;
 }
 
-/* Script Cards Showcase Grid Framework Layout */
+/* Marketplace Products Matrix Layout configurations */
 .products-display-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -200,6 +200,17 @@ body.amazon-dark {
     align-items: center;
     justify-content: center;
     border: 1px solid #161f30;
+    position: relative;
+}
+
+.card-image-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffff, #9d4edd);
 }
 
 .card-image-box img {
@@ -257,7 +268,7 @@ body.amazon-dark {
     color: #05070a;
 }
 
-/* Bulletproof Profile Section Text Components Layout Architecture */
+/* Profile Visual Components Container Framework Layout */
 .about-me-container {
     display: flex;
     align-items: center;
@@ -270,7 +281,6 @@ body.amazon-dark {
     flex: 1;
 }
 
-/* Bulletproof heading configuration resolves all PC pink mask glitches completely */
 .about-me-heading {
     font-size: 42px;
     font-weight: 800;
@@ -340,7 +350,7 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsive adjustment collapse engines */
+/* Responsiveness Media Breakpoints configurations */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
