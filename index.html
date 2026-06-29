@@ -1,92 +1,426 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyStore | Futuristic Python Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome required for the brand/social icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-</head>
-<body class="amazon-dark">
+/* Core Structural Adjustments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
-    <!-- Amazon Dark Navigation Bar Header -->
-    <header class="amazon-header">
-        <div class="logo-wrapper" id="headerLogoBtn">
-            <!-- Brand Icon Logo SVG -->
-            <svg class="header-brand-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div class="header-logo">PyStore<span>.com</span></div>
-        </div>
-        
-        <div class="header-search">
-            <input type="text" id="searchInput" placeholder="Scan premium Python scripts database...">
-            <button class="search-icon-btn" id="searchBtn">🔍</button>
-        </div>
-        <div class="header-right-text">System Core Manager</div>
-    </header>
+body.amazon-dark {
+    background-color: #0a0b0e; 
+    color: #eaeded;
+    overflow-x: hidden;
+}
 
-    <!-- Amazon Style Sub-Navigation Bar Layout -->
-    <nav class="amazon-sub-nav">
-        <div class="sub-nav-all-btn">
-            <span class="hamburger-icon">☰</span>
-            <span class="all-text">All Systems</span>
-        </div>
-        <a href="#" id="navHomeLink" class="sub-nav-link active">Home</a>
-        <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
-    </nav>
+/* MANDATORY PAGE SWITCHING ENGINE SYSTEM RULES */
+.view-section {
+    display: block !important;
+}
 
-    <!-- Main Content Container Grid -->
-    <main class="main-container">
-        
-        <!-- Page 1: Home View (Product Catalog Grid) -->
-        <section id="home-page-section" class="view-section page-transition-active">
-            <h2 class="section-heading">Featured Core Files</h2>
-            <!-- The Full-Width Amazon Product Card Grid Layout -->
-            <div class="products-display-grid" id="catalog-grid">
-                <!-- JavaScript dynamically loads cards here -->
-            </div>
-        </section>
+.view-section.hidden {
+    display: none !important;
+}
 
-        <!-- Page 2: About Developer View (Hidden on Load) -->
-        <section id="about-page-section" class="view-section hidden">
-            <div class="about-me-container">
-                
-                <!-- Left Text and Social Icons Column -->
-                <div class="about-me-content">
-                    <h2 class="about-me-heading">AJ <span>Official</span></h2>
-                    <h3 class="developer-display-name">Ajay Kumar</h3>
-                    <p class="about-me-text">
-                        Hi, I am a passionate Python developer dedicated to creating clean, efficient, and scalable scripts. Welcome to PyStore, where I share my premium code solutions to help you automate workflows and build powerful software applications.
-                    </p>
-                    <p class="about-me-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit necessitatibus velit ea obcaecati architecto provident placeat fugit suscipit, repellendus quo facilis quas.
-                    </p>
-                    
-                    <!-- Outlined Portfolio Badges -->
-                    <div class="about-social-links">
-                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
+/* High-tech Entrance Animation */
+.page-transition-active {
+    animation: futuristicSlideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
 
-                <!-- Right Styled Portrait Column Frame -->
-                <div class="about-me-visual">
-                    <div class="portrait-yellow-card">
-                        <!-- Points to your profile.jpg asset image -->
-                        <img src="profile.jpg" alt="Ajay Kumar Profile Picture" class="portrait-img" onerror="this.style.opacity='0';">
-                    </div>
-                </div>
+@keyframes futuristicSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
 
-            </div>
-        </section>
+/* Amazon Dark Header Bar Styling */
+.amazon-header {
+    background-color: #06080c; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    border-bottom: 1px solid #1f2d3d;
+}
 
-    </main>
+/* Brand Logo Layout Wrapper Fixes Overlap */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.logo-wrapper:hover {
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Futuristic Logo Graphic Icon styling */
+.header-brand-logo-icon {
+    width: 26px;
+    height: 26px;
+    animation: logoGlowPulse 3s infinite ease-in-out;
+}
+
+@keyframes logoGlowPulse {
+    0%, 100% { filter: drop-shadow(0 0 2px #00ffff); }
+    50% { filter: drop-shadow(0 0 6px #ff007f); }
+}
+
+.header-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.header-logo span {
+    color: #00ffff; 
+    font-size: 14px;
+}
+
+/* Centralized Search Bar Construction Fix */
+.header-search {
+    display: flex;
+    flex: 1;
+    max-width: 650px;
+    margin: 0 40px;
+    height: 38px;
+    align-items: center;
+}
+
+.header-search input {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border: 1px solid #1f2d3d;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #121620;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.header-search input:focus {
+    border-color: #00ffff;
+}
+
+.header-search .search-icon-btn {
+    background-color: #1a2233;
+    border: 1px solid #1f2d3d;
+    border-left: none;
+    width: 45px;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.header-search .search-icon-btn:hover {
+    background-color: #00ffff;
+    color: #06080c;
+}
+
+.header-right-text {
+    color: #8fa0b5;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* Amazon Sub-Navigation Bar styling layout */
+.amazon-sub-nav {
+    background-color: #0f131a;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 4px;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    border-bottom: 1px solid #161f2b;
+}
+
+.sub-nav-all-btn {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    gap: 6px;
+}
+
+.sub-nav-all-btn:hover {
+    color: #ff007f;
+}
+
+.sub-nav-link {
+    color: #a0b0c5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.15s ease;
+}
+
+.sub-nav-link:hover {
+    border: 1px solid #00ffff;
+    color: #ffffff;
+}
+
+.sub-nav-link.active {
+    font-weight: 700;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+
+/* Page Container Layout padding */
+.main-container {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #1f2d3d;
+    padding-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Grid Layout for Cards */
+.products-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+/* Showcase Card with Futuristic Design upgrades */
+.amazon-product-card {
+    background-color: #111520; 
+    border: 1px solid #1f2d3d;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+}
+
+.amazon-product-card:hover {
+    transform: translateY(-4px);
+    border-color: #00ffff;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+}
+
+.card-image-box {
+    width: 100%;
+    height: 180px;
+    background-color: #06080c;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #161f2b;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 13px;
+    color: #8fa0b5;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.install-box {
+    background-color: #06080c;
+    border: 1px solid #1f2d3d;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: #00ffff;
+    display: block;
+    word-break: break-all;
+}
+
+.amazon-download-button {
+    background-color: #121620;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.amazon-download-button:hover {
+    background-color: #00ffff;
+    color: #06080c;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Profile Section Containers Content Alignment */
+.about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.about-me-content {
+    flex: 1;
+}
+
+.about-me-heading {
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.about-me-heading span {
+    color: #ff007f;
+}
+
+.developer-display-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+.about-me-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8fa0b5;
+    margin-bottom: 15px;
+}
+
+.about-social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.social-icon-box {
+    width: 42px;
+    height: 42px;
+    border: 1.5px solid #1f2d3d;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    background-color: #111520;
+}
+
+.social-icon-box:hover {
+    border-color: #00ffff;
+    color: #00ffff;
+    transform: translateY(-2px);
+}
+
+.about-me-visual {
+    flex-shrink: 0;
+}
+
+/* Card rounded background setup */
+.portrait-yellow-card {
+    background: #bfa100; 
+    width: 300px;
+    height: 250px;
+    border-radius: 30px; 
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(191, 161, 0, 0.15);
+}
+
+.portrait-img {
+    width: 100%;
+    height: 135%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Responsiveness layouts grid adjustments */
+@media (max-width: 850px) {
+    .about-me-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 60px;
+    }
+    .about-social-links {
+        justify-content: center;
+    }
+    .header-search {
+        margin: 0 15px;
+    }
+    .header-right-text {
+        display: none;
+    }
+}
