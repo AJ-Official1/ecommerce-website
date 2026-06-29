@@ -12,13 +12,22 @@ body.amazon-dark {
     overflow-x: hidden;
 }
 
-/* MANDATORY PAGE SWITCHING ENGINE SYSTEM RULES */
-.view-section {
+/* MANDATORY PAGE SWITCHING ENGINE SYSTEM CONTAINER TOGGLE RULES */
+.main-container {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
     display: block !important;
 }
 
-.view-section.hidden {
+.main-container.hidden {
     display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /* High-tech Entrance Animation */
@@ -198,14 +207,7 @@ body.amazon-dark {
     border-radius: 4px;
 }
 
-/* Page Layout Container */
-.main-container {
-    padding: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* CLEAN CONTAINMENT HEADER BOXES - ABSOLUTELY NO RESIDUAL FLOATING UNDERLINES STYLED ANYWHERE */
+/* Clean title wrap section structures with no custom layout box borders */
 .clean-section-header {
     margin-bottom: 30px;
     display: block;
@@ -312,7 +314,7 @@ body.amazon-dark {
     justify-content: space-between;
     gap: 60px;
     max-width: 1000px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto;
 }
 
 .about-me-content {
@@ -361,20 +363,9 @@ body.amazon-dark {
     background-color: #0d121f;
 }
 
-.social-icon-box.site-link:hover {
-    border-color: #00ffff;
-    color: #00ffff;
-}
-
-.social-icon-box.linkedin-link:hover {
-    border-color: #0077b5;
-    color: #0077b5;
-}
-
-.social-icon-box.github-link:hover {
-    border-color: #9d4edd;
-    color: #9d4edd;
-}
+.social-icon-box.site-link:hover { border-color: #00ffff; color: #00ffff; }
+.social-icon-box.linkedin-link:hover { border-color: #0077b5; color: #0077b5; }
+.social-icon-box.github-link:hover { border-color: #9d4edd; color: #9d4edd; }
 
 .about-me-visual {
     flex-shrink: 0;
@@ -397,4 +388,22 @@ body.amazon-dark {
     object-fit: cover;
     position: absolute;
     bottom: 0;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 850px) {
+    .about-me-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 60px;
+    }
+    .about-social-links {
+        justify-content: center;
+    }
+    .header-search {
+        margin: 0 15px;
+    }
+    .header-right-text {
+        display: none;
+    }
 }
