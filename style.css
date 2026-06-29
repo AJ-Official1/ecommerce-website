@@ -7,22 +7,41 @@
 }
 
 body.amazon-dark {
-    background-color: #0d0e12; /* Deep modern dark color from reference image */
+    background-color: #0a0b0e; 
     color: #eaeded;
+    overflow-x: hidden;
 }
 
-/* Page Section Toggling */
-.page-section {
+/* Page Visibility & Animations Engine */
+.view-section {
     display: block;
 }
 
-.page-section.hidden {
+.view-section.hidden {
     display: none !important;
+}
+
+/* High-tech Entrance Animation */
+.page-transition-active {
+    animation: futuristicSlideIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes futuristicSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
 }
 
 /* Amazon Dark Header Bar Styling */
 .amazon-header {
-    background-color: #131921; 
+    background-color: #06080c; 
     height: 60px;
     display: flex;
     align-items: center;
@@ -31,18 +50,50 @@ body.amazon-dark {
     position: sticky;
     top: 0;
     z-index: 101;
+    border-bottom: 1px solid #1f2d3d;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Brand Logo Layout Wrapper */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.logo-wrapper:hover {
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Futuristic Logo Graphic Icon styling */
+.header-brand-logo-icon {
+    width: 28px;
+    height: 28px;
+    animation: logoGlowPulse 3s infinite ease-in-out;
+}
+
+@keyframes logoGlowPulse {
+    0%, 100% { filter: drop-shadow(0 0 2px #00ffff); }
+    50% { filter: drop-shadow(0 0 8px #ff007f); }
 }
 
 .header-logo {
     font-size: 22px;
     font-weight: 700;
     color: #ffffff;
-    cursor: pointer;
+    letter-spacing: 0.5px;
 }
 
 .header-logo span {
-    color: #ff9900; 
+    color: #00ffff; 
     font-size: 15px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
 }
 
 .header-search {
@@ -55,71 +106,104 @@ body.amazon-dark {
 .header-search input {
     width: 100%;
     height: 40px;
-    padding: 10px;
-    border: none;
+    padding: 10px 15px;
+    border: 1px solid #1f2d3d;
     border-radius: 4px 0 0 4px;
     outline: none;
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #121620;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.header-search input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
 }
 
 .header-search .search-icon-btn {
-    background-color: #febd69;
-    border: none;
+    background-color: #1a2233;
+    border: 1px solid #1f2d3d;
+    border-left: none;
     width: 45px;
     height: 40px;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.2s ease;
 }
 
 .header-search .search-icon-btn:hover {
-    background-color: #f3a847;
+    background-color: #00ffff;
+    color: #06080c;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
 }
 
 .header-right-text {
-    color: #ffffff;
-    font-size: 14px;
+    color: #8fa0b5;
+    font-size: 13px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Amazon Sub-Navigation Bar Layout */
+/* Amazon Sub-Navigation Bar styling layout from screenshot reference */
 .amazon-sub-nav {
-    background-color: #232f3e;
+    background-color: #0f131a;
     height: 40px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    gap: 15px;
+    padding: 0 15px;
+    gap: 2px;
     position: sticky;
     top: 60px;
     z-index: 100;
+    border-bottom: 1px solid #161f2b;
 }
 
-.sub-nav-link {
+.sub-nav-all-btn {
+    display: flex;
+    align-items: center;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px 10px;
+    padding: 6px 10px;
     border: 1px solid transparent;
     border-radius: 2px;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.sub-nav-all-btn:hover {
+    border: 1px solid #ff007f;
+    color: #ff007f;
+}
+
+.sub-nav-link {
+    color: #a0b0c5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.2s ease;
 }
 
 .sub-nav-link:hover {
-    border: 1px solid #ffffff;
+    border: 1px solid #00ffff;
+    color: #ffffff;
 }
 
 .sub-nav-link.active {
     font-weight: 700;
-    border-bottom: 2px solid #ff9900;
-    border-radius: 0;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.2);
 }
 
-/* Page Layout Container */
+/* Page Layout */
 .main-container {
-    padding: 40px;
+    padding: 30px 40px;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -127,9 +211,10 @@ body.amazon-dark {
 .section-heading {
     font-size: 21px;
     font-weight: 700;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #3a3f45;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #1f2d3d;
     padding-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 /* Grid Layout for Cards */
@@ -139,77 +224,94 @@ body.amazon-dark {
     gap: 25px;
 }
 
-/* Amazon Style Showcase Card */
+/* Amazon Style Showcase Card with Futuristic Glow Upgrades */
 .amazon-product-card {
-    background-color: #232f3e; 
-    border: 1px solid #3a3f45;
-    border-radius: 4px;
+    background-color: #111520; 
+    border: 1px solid #1f2d3d;
+    border-radius: 6px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.15s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .amazon-product-card:hover {
-    transform: scale(1.02);
-    border-color: #ff9900;
+    transform: translateY(-5px);
+    border-color: #00ffff;
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
 }
 
+/* Picture Image Layout container */
 .card-image-box {
     width: 100%;
     height: 200px;
-    background-color: #1a1d20;
+    background-color: #06080c;
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #161f2b;
 }
 
 .card-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    transition: transform 0.5s ease;
 }
 
+.amazon-product-card:hover .card-image-box img {
+    transform: scale(1.05);
+}
+
+/* Information Layouts */
 .card-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 6px;
     color: #ffffff;
     line-height: 1.3;
+    transition: color 0.2s ease;
+}
+
+.amazon-product-card:hover .card-title {
+    color: #00ffff;
 }
 
 .card-description {
-    font-size: 12px;
-    color: #bdc4c9;
+    font-size: 13px;
+    color: #8fa0b5;
     line-height: 1.4;
     margin-bottom: 15px;
     flex-grow: 1;
 }
 
+/* Terminal installation setup container */
 .install-box {
-    background-color: #131921;
-    border: 1px solid #3a3f45;
+    background-color: #06080c;
+    border: 1px solid #1f2d3d;
     border-radius: 4px;
     padding: 8px;
     margin-top: 8px;
     margin-bottom: 12px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 11px;
-    color: #ffd814;
+    color: #00ffff;
     display: block;
     word-break: break-all;
+    box-shadow: inset 0 0 5px rgba(0,255,255,0.05);
 }
 
+/* Yellow Amazon Download Call To Action Button with Neon Overlay */
 .amazon-download-button {
-    background-color: #ffd814;
-    border: 1px solid #fcd200;
-    color: #0f1111;
+    background-color: #121620;
+    border: 1px solid #00ffff;
+    color: #00ffff;
     width: 100%;
-    padding: 9px;
+    padding: 10px;
     font-size: 13px;
     font-weight: bold;
     border-radius: 20px; 
@@ -217,21 +319,24 @@ body.amazon-dark {
     text-align: center;
     text-decoration: none;
     display: block;
-    transition: background-color 0.1s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
 }
 
 .amazon-download-button:hover {
-    background-color: #f7ca00;
+    background-color: #00ffff;
+    color: #06080c;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
 }
 
-/* Reference Image Profile Layout Section Style */
+/* Futuristic Portrait Layout Section Styles */
 .about-me-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
     max-width: 1100px;
-    margin: 40px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .about-me-content {
@@ -247,17 +352,17 @@ body.amazon-dark {
 }
 
 .about-me-heading span {
-    color: #febd69; /* Matches your orange yellow visual tone */
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
 }
 
 .about-me-text {
     font-size: 15px;
     line-height: 1.7;
-    color: #a0a5b5;
+    color: #8fa0b5;
     margin-bottom: 20px;
 }
 
-/* Custom Outlined Social Icon Blocks */
 .about-social-links {
     display: flex;
     gap: 12px;
@@ -267,7 +372,7 @@ body.amazon-dark {
 .social-icon-box {
     width: 44px;
     height: 44px;
-    border: 1.5px solid #4a4d57;
+    border: 1.5px solid #1f2d3d;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -276,39 +381,49 @@ body.amazon-dark {
     text-decoration: none;
     font-size: 18px;
     transition: all 0.2s ease;
+    background-color: #111520;
 }
 
 .social-icon-box:hover {
-    border-color: #febd69;
-    color: #febd69;
-    transform: translateY(-2px);
+    border-color: #00ffff;
+    color: #00ffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
 }
 
-/* Right Column Yellow Card Frame Style */
 .about-me-visual {
     flex-shrink: 0;
 }
 
+/* Replicated geometry frame with animated hover shift */
 .portrait-yellow-card {
-    background-color: #f7ca00;
+    background: linear-gradient(135deg, #00ffff, #ff007f);
     width: 320px;
-    height: 260px;
-    border-radius: 30px;
+    height: 250px;
+    border-radius: 24px;
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    animation: subtleFloat 4s infinite ease-in-out;
+}
+
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 .portrait-img {
     width: 100%;
-    height: 135%; /* Allows head to extend organically outside card framework boundaries */
+    height: 135%;
     object-fit: cover;
     position: absolute;
     bottom: 0;
 }
 
-/* Responsive adjustment viewports */
+/* Responsive adjustment breakpoints */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
@@ -320,6 +435,12 @@ body.amazon-dark {
     }
     .portrait-yellow-card {
         width: 280px;
-        height: 220px;
+        height: 210px;
+    }
+    .header-search {
+        margin: 0 10px;
+    }
+    .header-right-text {
+        display: none;
     }
 }
