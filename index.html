@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyStore | Futuristic Cyber Hub</title>
-    <!-- Increment version number to force instant browser layout cache clear -->
-    <link rel="stylesheet" href="style.css?v=6.0">
+    <!-- Increment version to v=7.0 to bypass old browser layout cache -->
+    <link rel="stylesheet" href="style.css?v=7.0">
     <!-- FontAwesome required for the brand/social icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
@@ -36,11 +36,12 @@
             <span class="hamburger-icon">☰</span>
             <span class="all-text">All Systems</span>
         </div>
+        <!-- Safe segregated navigation links mapping IDs -->
         <a href="#" id="navHomeLink" class="sub-nav-link active">Home</a>
         <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
     </nav>
 
-    <!-- Page 1: Home View Page Grid Container (Hidden entirely on about path toggle clicks) -->
+    <!-- Page 1: Home View Page Grid Container -->
     <main class="main-container" id="homeViewContainer">
         <section id="home-page-section" class="view-section page-transition-active">
             <div class="clean-section-header">
@@ -53,7 +54,7 @@
         </section>
     </main>
 
-    <!-- Page 2: About Developer View Container (Hidden entirely on load) -->
+    <!-- Page 2: About Developer View Container -->
     <main class="main-container hidden" id="aboutViewContainer">
         <section id="about-page-section" class="view-section page-transition-active">
             <div class="about-me-container">
