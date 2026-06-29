@@ -146,7 +146,7 @@ body.amazon-dark {
     letter-spacing: 1px;
 }
 
-/* Amazon Sub-Navigation Bar styling layout from screenshot reference */
+/* Amazon Sub-Navigation Bar styling layout */
 .amazon-sub-nav {
     background-color: #0f131a;
     height: 40px;
@@ -305,7 +305,7 @@ body.amazon-dark {
     box-shadow: inset 0 0 5px rgba(0,255,255,0.05);
 }
 
-/* Yellow Amazon Download Call To Action Button with Neon Overlay */
+/* Download Call To Action Button with Neon Overlay */
 .amazon-download-button {
     background-color: #121620;
     border: 1px solid #00ffff;
@@ -347,13 +347,21 @@ body.amazon-dark {
     font-size: 42px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
 .about-me-heading span {
     color: #ff007f;
     text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+.developer-display-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
 }
 
 .about-me-text {
@@ -395,18 +403,17 @@ body.amazon-dark {
     flex-shrink: 0;
 }
 
-/* Replicated geometry frame with animated hover shift */
+/* Gold background panel frame matching your reference layout architecture */
 .portrait-yellow-card {
-    background: linear-gradient(135deg, #00ffff, #ff007f);
+    background: #bfa100; 
     width: 320px;
     height: 250px;
-    border-radius: 24px;
+    border-radius: 30px; 
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(191, 161, 0, 0.25);
     animation: subtleFloat 4s infinite ease-in-out;
 }
 
