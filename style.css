@@ -226,7 +226,7 @@ body.amazon-dark {
     margin: 0 auto;
 }
 
-/* SOLID HEADING LAYOUT OBJECTS - REMOVED STRAY LINE ATTRIBUTES FROM ENTIRE ARCHITECTURE */
+/* HIGH-FIDELITY SEGREGATED HEADING BLOCKS - ZERO BORDERS STYLED ANYWHERE */
 .clean-section-header {
     margin-bottom: 30px;
     display: block;
@@ -377,10 +377,10 @@ body.amazon-dark {
     display: block;
 }
 
-/* COMPREHENSIVE TEXT MASK FIX PREVENTS SOLID PINK BLOCKS ON COMPUTER CHIPS */
+/* ULTRA-PRECISE TEXT GRADIENT PROCESSING RULES - RESOLVES PC WEB DISPLAY BUGS */
 .about-me-heading .gradient-text {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff007f, #9d4edd);
+    display: inline-block !important;
+    background: linear-gradient(135deg, #ff007f, #9d4edd) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
