@@ -68,8 +68,8 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
 
     if (currentItems.length === 0) {
         catalogGrid.innerHTML = `
-            <p style="grid-column: 1/-1; text-align: center; color: #bdc4c9; padding: 40px; border: 1px dashed #3a3f45; border-radius: 8px;">
-                No matching Python scripts found.
+            <p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px; border: 1px dashed #1f2d3d; border-radius: 8px;">
+                No matching terminal records located in active memory database.
             </p>`;
         return;
     }
@@ -83,14 +83,14 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 <!-- Photo Container with Placeholder fallback system -->
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#131921; color:#febd69; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace;">
+                    <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#06080c; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #1f2d3d;">
                         &lt; ${item.title} /&gt;
                     </div>
                 </div>
                 <div class="card-title">${item.title}</div>
                 <div class="card-description">
                     ${item.description}
-                    <div style="margin-top: 10px; color: #ffffff; font-weight: 600; font-size: 11px;">🔧 Required Installation:</div>
+                    <div style="margin-top: 10px; color: #00ffff; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">🔧 Initialize Setup:</div>
                     <code class="install-box">${item.installGuide}</code>
                 </div>
             </div>
@@ -127,6 +127,11 @@ function setupSearch() {
             item.installGuide.toLowerCase().includes(searchTerm)
         );
         
+        // Auto refocus screen viewport layout context back to main screen during search actions
+        const homeSection = document.getElementById('home-page-section');
+        if (homeSection && homeSection.classList.contains('hidden')) {
+            switchToHomeView();
+        }
         loadCatalogItems(matchedItems);
     }, 200)); 
 }
@@ -134,7 +139,6 @@ function setupSearch() {
 // Infinite Scrolling setup to seamlessly append items as you scroll down
 function setupInfiniteScroll() {
     window.addEventListener('scroll', () => {
-        // Only run infinite scroll checks if the Home page catalog is actually visible
         const homeSection = document.getElementById('home-page-section');
         if (homeSection && homeSection.classList.contains('hidden')) return;
 
@@ -147,34 +151,63 @@ function setupInfiniteScroll() {
     });
 }
 
-// Page Navigation Setup: Smoothly manages shifting visibility between independent sections
-function setupPageNavigation() {
-    const navHome = document.getElementById('nav-home');
-    const navAbout = document.getElementById('nav-about');
+// Single Page Switching Interface Engine Mechanics with Active Fluid Animation Additions
+function switchToHomeView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
+    
+    document.getElementById('navHomeLink').classList.add('active');
+    document.getElementById('navAboutLink').classList.remove('active');
+    
+    aboutSection.classList.add('hidden');
+    homeSection.classList.remove('hidden');
+    
+    // Fire fresh animation reset trigger sequence loops
+    homeSection.classList.remove('page-transition-active');
+    void homeSection.offsetWidth; // Force hardware DOM layout reflow calculation step
+    homeSection.classList.add('page-transition-active');
+}
 
-    if (!navHome || !navAbout || !homeSection || !aboutSection) return;
+function switchToAboutView() {
+    const homeSection = document.getElementById('home-page-section');
+    const aboutSection = document.getElementById('about-page-section');
+    
+    document.getElementById('navAboutLink').classList.add('active');
+    document.getElementById('navHomeLink').classList.remove('active');
+    
+    homeSection.classList.add('hidden');
+    aboutSection.classList.remove('hidden');
+    
+    // Fire fresh animation reset trigger sequence loops
+    aboutSection.classList.remove('page-transition-active');
+    void aboutSection.offsetWidth; // Force hardware DOM layout reflow calculation step
+    aboutSection.classList.add('page-transition-active');
+}
 
-    navHome.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Visual button adjustments
-        navHome.classList.add('active');
-        navAbout.classList.remove('active');
-        // Structural DOM changes
-        homeSection.classList.remove('hidden');
-        aboutSection.classList.add('hidden');
-    });
+function setupSinglePageNavigation() {
+    const navHome = document.getElementById('navHomeLink');
+    const navAbout = document.getElementById('navAboutLink');
+    const logoBtn = document.getElementById('headerLogoBtn');
 
-    navAbout.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Visual button adjustments
-        navAbout.classList.add('active');
-        navHome.classList.remove('active');
-        // Structural DOM changes
-        aboutSection.classList.remove('hidden');
-        homeSection.classList.add('hidden');
-    });
+    if (navHome) {
+        navHome.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchToHomeView();
+        });
+    }
+
+    if (navAbout) {
+        navAbout.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchToAboutView();
+        });
+    }
+
+    if (logoBtn) {
+        logoBtn.addEventListener('click', function() {
+            switchToHomeView();
+        });
+    }
 }
 
 // Initialize system engines
@@ -182,5 +215,5 @@ window.onload = function() {
     loadCatalogItems();
     setupSearch();
     setupInfiniteScroll();
-    setupPageNavigation(); // Runs navigation listeners alongside your database card injection
+    setupSinglePageNavigation();
 };
