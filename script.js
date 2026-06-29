@@ -4,21 +4,21 @@ const myPythonLibrary = [
         title: "Offline AI Script Engine", 
         description: "Runs open-source machine learning models locally on your machine without requiring an active internet connection.", 
         installGuide: "pip install ollama", 
-        photoUrl: "picweb/offline_ai.jpg", 
+        photoUrl: "offline_ai.jpg", 
         fileLocation: "pyzone-marketplace/offline_AI.py" 
     },
     {
         title: "10 Cool Text and Visual Effects", 
         description: "Suggest a font combination for this sentence Provide a longer definition of design Show how to style this text using CSS", 
         installGuide: "pip install pygame", 
-        photoUrl: "picweb/cool_effects.jpg", 
+        photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/10_cool_effects.py" 
     },
         {
         title: "Rock, Paper and Scissors", 
         description: "Rock Paper Scissors is a simple, two-player hand game of chance and strategy. Players simultaneously form one of three hand shapes", 
         installGuide: "pip install pygame", 
-        photoUrl: "picweb/rps.jpg", 
+        photoUrl: "rps.jpg", 
         fileLocation: "pyzone-marketplace/rock pap.py" 
     }
 ];
