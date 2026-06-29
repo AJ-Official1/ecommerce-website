@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyStore | Futuristic Cyber Hub</title>
-    <!-- Version tag v=5.0 forces browsers to dump old styling configurations instantly -->
-    <link rel="stylesheet" href="style.css?v=5.0">
+    <!-- Increment version number to force instant browser layout cache clear -->
+    <link rel="stylesheet" href="style.css?v=6.0">
     <!-- FontAwesome required for the brand/social icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
@@ -40,10 +40,8 @@
         <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
     </nav>
 
-    <!-- Main Content Container Grid -->
-    <main class="main-container">
-        
-        <!-- Page 1: Home View (Product Catalog Grid) -->
+    <!-- Page 1: Home View Page Grid Container (Hidden entirely on about path toggle clicks) -->
+    <main class="main-container" id="homeViewContainer">
         <section id="home-page-section" class="view-section page-transition-active">
             <div class="clean-section-header">
                 <h2 class="section-heading">Featured Core Files</h2>
@@ -53,15 +51,16 @@
                 <!-- JavaScript dynamically loads cards here -->
             </div>
         </section>
+    </main>
 
-        <!-- Page 2: About Developer View (Hidden on Load) -->
-        <section id="about-page-section" class="view-section hidden">
+    <!-- Page 2: About Developer View Container (Hidden entirely on load) -->
+    <main class="main-container hidden" id="aboutViewContainer">
+        <section id="about-page-section" class="view-section page-transition-active">
             <div class="about-me-container">
                 
                 <!-- Left Text and Social Icons Column -->
                 <div class="about-me-content">
                     <div class="clean-section-header">
-                        <!-- Bulleproof solid neon text styling removes blocky background box issues -->
                         <h2 class="about-me-heading">AJ Official</h2>
                     </div>
                     <h3 class="developer-display-name">Ajay Kumar</h3>
@@ -89,7 +88,6 @@
 
             </div>
         </section>
-
     </main>
 
     <script src="script.js"></script>
