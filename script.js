@@ -4,7 +4,7 @@ const myPythonLibrary = [
         title: "Offline AI Script Engine", 
         description: "Runs open-source machine learning models locally on your machine without requiring an active internet connection.", 
         installGuide: "pip install ollama", 
-        photoUrl: "offline_ai.jpg", 
+        photoUrl: "picweb/offline_ai.jpg", 
         fileLocation: "pyzone-marketplace/offline_AI.py" 
     },
     {
