@@ -81,7 +81,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
             <div>
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#06080c; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #1f2d3d;">
+                    <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#05070a; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #161f30;">
                         &lt; ${item.title} /&gt;
                     </div>
                 </div>
