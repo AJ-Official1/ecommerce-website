@@ -1,4 +1,4 @@
-// DATABASE: Python scripts data repository array live tracking lists
+// Active Library Database Source Repository
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -26,7 +26,7 @@ const myPythonLibrary = [
 let currentItems = [...myPythonLibrary];
 let itemsToDisplay = 20; 
 
-// High-performance file downloader that forces a save prompt
+// Dynamic hard-drive anchor download forcing sequences
 async function forceFileDownload(fileUrl, fileName) {
     try {
         const response = await fetch(fileUrl);
@@ -45,7 +45,6 @@ async function forceFileDownload(fileUrl, fileName) {
         document.body.removeChild(hiddenAnchor);
         window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
-        console.error("Download fallback triggered:", error);
         const fallbackAnchor = document.createElement('a');
         fallbackAnchor.href = fileUrl;
         fallbackAnchor.download = fileName.split('/').pop();
@@ -53,7 +52,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects the dynamic grid cards into the screen
+// Injects standard marketplace display structures into display blocks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -65,7 +64,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     }
 
     if (currentItems.length === 0) {
-        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px; border: 1px dashed #1f2d3d; border-radius: 8px;">No records located.</p>';
+        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px;">No matching core scripts located.</p>';
         return;
     }
 
@@ -78,18 +77,18 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#05070a; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #161f30;">
-                        Preview Content
+                        Code File Asset
                     </div>
                 </div>
                 <div class="card-title">${item.title}</div>
                 <div class="card-description">
                     ${item.description}
-                    <div style="margin-top: 10px; color: #00ffff; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">🔧 Setup:</div>
+                    <div style="margin-top: 10px; color: #00ffff; font-weight: 600; font-size: 11px; text-transform: uppercase;">🔧 Initialize Setup:</div>
                     <code class="install-box">${item.installGuide}</code>
                 </div>
             </div>
             <button onclick="forceFileDownload('${item.fileLocation}', '${item.fileLocation}')" class="amazon-download-button">
-                Download Script
+                Download Script File
             </button>
         </div>
     `).join('');
@@ -137,7 +136,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// TOGGLES PARENT CONTAINERS INSTEAD OF CHILDREN CHUNKS
+// Master tab switching container management systems toggles layout wrappers fully
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
