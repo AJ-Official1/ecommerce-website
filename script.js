@@ -160,6 +160,7 @@ function switchToHomeView() {
     homeSection.classList.add('page-transition-active');
 }
 
+// Switches view tabs
 function switchToAboutView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
