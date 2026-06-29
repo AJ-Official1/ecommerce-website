@@ -458,7 +458,7 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsiveness Media Query Layout Adjustments */
+/* Mobile Media Queries */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
