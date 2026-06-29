@@ -3,44 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyStore | Your Python Library</title>
+    <title>PyStore | Futuristic Python Hub</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for the social media icons -->
+    <!-- FontAwesome required for the brand/social icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="amazon-dark">
 
-    <!-- Main Amazon Top Header Bar -->
+    <!-- Amazon Dark Navigation Bar Header -->
     <header class="amazon-header">
-        <div class="header-logo">PyStore<span>.com</span></div>
-
-        <div class="header-search">
-            <input type="text" id="searchInput" placeholder="Search premium Python scripts...">
-            <button class="search-icon-btn">🔍</button>
+        <div class="logo-wrapper" id="headerLogoBtn">
+            <!-- Brand Icon Logo SVG placeholder - left to PyStore.com -->
+            <svg class="header-brand-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="header-logo">PyStore<span>.com</span></div>
         </div>
         
-        <div class="header-right-text">Script Manager</div>
+        <div class="header-search">
+            <input type="text" id="searchInput" placeholder="Scan premium Python scripts database...">
+            <button class="search-icon-btn" id="searchBtn">🔍</button>
+        </div>
+        <div class="header-right-text">System Core Manager</div>
     </header>
 
-    <!-- Amazon Style Sub-Navigation Bar -->
+    <!-- Amazon Style Sub-Navigation Bar Layout -->
     <nav class="amazon-sub-nav">
-        <a href="#" id="nav-home" class="sub-nav-link active">Home</a>
-        <a href="#" id="nav-about" class="sub-nav-link">About Developer</a>
+        <div class="sub-nav-all-btn">
+            <span class="hamburger-icon">☰</span>
+            <span class="all-text">All Systems</span>
+        </div>
+        <a href="#" id="navHomeLink" class="sub-nav-link active">Home Base</a>
+        <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
     </nav>
 
     <!-- Main Content Container Grid -->
     <main class="main-container">
         
-        <!-- Home Section (Visible by default) -->
-        <section id="home-page-section" class="page-section">
-            <h2 class="section-heading">Featured Python Files</h2>
+        <!-- Page 1: Home View (Product Catalog Grid) -->
+        <section id="home-page-section" class="view-section page-transition-active">
+            <h2 class="section-heading">Featured Core Files</h2>
+            <!-- The Full-Width Amazon Product Card Grid Layout -->
             <div class="products-display-grid" id="catalog-grid">
                 <!-- JavaScript dynamically loads cards here -->
             </div>
         </section>
 
-        <!-- About Developer Section (Hidden by default) -->
-        <section id="about-page-section" class="page-section hidden">
+        <!-- Page 2: About Developer View (Hidden by Default) -->
+        <section id="about-page-section" class="view-section hidden">
             <div class="about-me-container">
                 
                 <!-- Left Text and Social Icons Column -->
@@ -53,7 +65,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit necessitatibus velit ea obcaecati architecto provident placeat fugit suscipit, repellendus quo facilis quas.
                     </p>
                     
-                    <!-- Social Links -->
+                    <!-- Outlined Portfolio Badges -->
                     <div class="about-social-links">
                         <a href="#" class="social-icon-box" target="_blank"><i class="fa-solid fa-globe"></i></a>
                         <a href="#" class="social-icon-box" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -61,11 +73,11 @@
                     </div>
                 </div>
 
-                <!-- Right Styled Portrait Column -->
+                <!-- Right Styled Portrait Column Frame -->
                 <div class="about-me-visual">
                     <div class="portrait-yellow-card">
-                        <!-- Replace with your actual picture filename -->
-                        <img src="your-picture.jpg" alt="AJ Official Profile Picture" class="portrait-img">
+                        <!-- Update source file link when uploading your picture -->
+                        <img src="your-picture.jpg" alt="Developer Profile Picture" class="portrait-img">
                     </div>
                 </div>
 
