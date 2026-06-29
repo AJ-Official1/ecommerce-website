@@ -137,7 +137,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// PROTECTED SWITCH ENGING TRANSITIONS PREVENTS OVERLAP CLIPS
+// TOGGLES PARENT CONTAINERS INSTEAD OF CHILDREN CHUNKS
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
