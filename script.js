@@ -141,16 +141,20 @@ function setupInfiniteScroll() {
     });
 }
 
-// MANDATORY SECTION VIEW SWITCHING FUNCTIONS
+// MANDATORY SECTION VIEW SWITCHING FUNCTIONS WITH LIVE SEARCH CONTAINER VISIBILITY MANAGER
 function switchToHomeView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
+    const searchWrapper = document.getElementById('mainSearchWrapper');
     
     document.getElementById('navHomeLink').classList.add('active');
     document.getElementById('navAboutLink').classList.remove('active');
     
     aboutSection.classList.add('hidden');
     homeSection.classList.remove('hidden');
+    
+    // Shows the header search wrapper box container on catalog pages
+    if (searchWrapper) searchWrapper.classList.remove('hidden-search');
     
     homeSection.classList.remove('page-transition-active');
     void homeSection.offsetWidth; 
@@ -160,12 +164,16 @@ function switchToHomeView() {
 function switchToAboutView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
+    const searchWrapper = document.getElementById('mainSearchWrapper');
     
     document.getElementById('navAboutLink').classList.add('active');
     document.getElementById('navHomeLink').classList.remove('active');
     
     homeSection.classList.add('hidden');
     aboutSection.classList.remove('hidden');
+    
+    // Completely hides the empty header outline wrapper on profile screens to fix the grey bar bug
+    if (searchWrapper) searchWrapper.classList.add('hidden-search');
     
     aboutSection.classList.remove('page-transition-active');
     void aboutSection.offsetWidth; 
