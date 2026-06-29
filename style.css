@@ -200,7 +200,6 @@ body.amazon-dark {
     border-radius: 4px;
 }
 
-/* Clean section header configurations */
 .clean-section-header {
     margin-bottom: 30px;
     display: block;
@@ -392,22 +391,4 @@ body.amazon-dark {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-}
-
-/* Responsiveness adjustments */
-@media (max-width: 850px) {
-    .about-me-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 60px;
-    }
-    .about-social-links {
-        justify-content: center;
-    }
-    .header-search {
-        margin: 0 15px;
-    }
-    .header-right-text {
-        display: none;
-    }
 }
