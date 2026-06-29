@@ -24,6 +24,13 @@ body.amazon-dark {
     z-index: 100;
 }
 
+/* Left container combining Logo and Links */
+.logo-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
 .header-logo {
     font-size: 22px;
     font-weight: 700;
@@ -36,10 +43,38 @@ body.amazon-dark {
     font-size: 15px;
 }
 
+/* Navigation Links styling */
+.header-nav-links {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.1s ease;
+}
+
+/* Amazon style outline box on hover */
+.nav-link:hover {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.nav-link.active {
+    color: #ff9900; /* Matches Amazon orange */
+}
+
+/* Search bar scaling */
 .header-search {
     display: flex;
     flex: 1;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 30px;
 }
 
@@ -72,6 +107,7 @@ body.amazon-dark {
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Page Layout */
@@ -183,4 +219,62 @@ body.amazon-dark {
 
 .amazon-download-button:hover {
     background-color: #f7ca00;
+}
+
+/* About Developer Section styling */
+.developer-section {
+    margin-top: 60px;
+    padding-top: 10px;
+}
+
+.developer-card {
+    display: flex;
+    background-color: #232f3e; /* Matches product card background */
+    border: 1px solid #3a3f45;
+    border-radius: 4px;
+    padding: 25px;
+    gap: 25px;
+    max-width: 800px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.developer-image-container {
+    flex-shrink: 0;
+}
+
+.developer-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #febd69;
+}
+
+.developer-info {
+    color: #ffffff;
+}
+
+.developer-name {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.developer-description {
+    margin: 0;
+    line-height: 1.6;
+    color: #bdc4c9;
+    font-size: 14px;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-nav-container {
+        gap: 10px;
+    }
 }
