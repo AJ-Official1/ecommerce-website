@@ -1,4 +1,4 @@
-// DATABASE: Both of your original Python scripts live here together perfectly at the top!
+// DATABASE: Python scripts data repository array live tracking lists
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -27,7 +27,7 @@ const myPythonLibrary = [
 let currentItems = [...myPythonLibrary];
 let itemsToDisplay = 20; 
 
-// High-performance file downloader that forces a true hard-drive save prompt
+// High-performance file downloader that forces a save prompt
 async function forceFileDownload(fileUrl, fileName) {
     try {
         const response = await fetch(fileUrl);
@@ -43,7 +43,6 @@ async function forceFileDownload(fileUrl, fileName) {
         document.body.appendChild(hiddenAnchor);
         hiddenAnchor.click();
         
-        // Clean up memory resources
         document.body.removeChild(hiddenAnchor);
         window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
@@ -80,7 +79,6 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const cardHTML = batch.map(item => `
         <div class="amazon-product-card">
             <div>
-                <!-- Photo Container with Placeholder fallback system -->
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#06080c; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #1f2d3d;">
@@ -94,7 +92,6 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                     <code class="install-box">${item.installGuide}</code>
                 </div>
             </div>
-            <!-- Intercepted action click button to prevent opening as page text -->
             <button onclick="forceFileDownload('${item.fileLocation}', '${item.fileLocation}')" class="amazon-download-button">
                 Download .py File
             </button>
@@ -127,11 +124,7 @@ function setupSearch() {
             item.installGuide.toLowerCase().includes(searchTerm)
         );
         
-        // Auto refocus screen viewport layout context back to main screen during search actions
-        const homeSection = document.getElementById('home-page-section');
-        if (homeSection && homeSection.classList.contains('hidden')) {
-            switchToHomeView();
-        }
+        switchToHomeView();
         loadCatalogItems(matchedItems);
     }, 200)); 
 }
@@ -151,7 +144,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// Single Page Switching Interface Engine Mechanics with Active Fluid Animation Additions
+// MANDATORY SECTION VIEW SWITCHING FUNCTIONS
 function switchToHomeView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
@@ -162,9 +155,8 @@ function switchToHomeView() {
     aboutSection.classList.add('hidden');
     homeSection.classList.remove('hidden');
     
-    // Fire fresh animation reset trigger sequence loops
     homeSection.classList.remove('page-transition-active');
-    void homeSection.offsetWidth; // Force hardware DOM layout reflow calculation step
+    void homeSection.offsetWidth; 
     homeSection.classList.add('page-transition-active');
 }
 
@@ -178,9 +170,8 @@ function switchToAboutView() {
     homeSection.classList.add('hidden');
     aboutSection.classList.remove('hidden');
     
-    // Fire fresh animation reset trigger sequence loops
     aboutSection.classList.remove('page-transition-active');
-    void aboutSection.offsetWidth; // Force hardware DOM layout reflow calculation step
+    void aboutSection.offsetWidth; 
     aboutSection.classList.add('page-transition-active');
 }
 
