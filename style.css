@@ -117,7 +117,7 @@ body.amazon-dark {
     flex-shrink: 0;
 }
 
-/* Subnavigation Menu navigation block layout configurations */
+/* Subnavigation Menu panel layout */
 .amazon-sub-nav {
     background-color: #0b0f19;
     padding: 10px 20px;
@@ -171,7 +171,7 @@ body.amazon-dark {
     color: #ffffff;
 }
 
-/* Marketplace Products Matrix Layout configurations */
+/* Marketplace Matrix Layout configurations */
 .products-display-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -268,7 +268,7 @@ body.amazon-dark {
     color: #05070a;
 }
 
-/* Profile Visual Components Container Framework Layout */
+/* Profile Section Layout Configuration */
 .about-me-container {
     display: flex;
     align-items: center;
@@ -303,6 +303,7 @@ body.amazon-dark {
     margin-bottom: 15px;
 }
 
+/* Social Badges Grid Array Layout wrapper */
 .about-social-links {
     display: flex;
     gap: 12px;
@@ -312,20 +313,39 @@ body.amazon-dark {
 .social-icon-box {
     width: 44px;
     height: 44px;
-    border: 1.5px solid #1f2d3d;
+    border: 1.5px solid #1a2336;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: #8292a6;
     text-decoration: none;
     font-size: 18px;
     background-color: #0d121f;
+    transition: all 0.25s ease;
 }
 
-.social-icon-box.site-link:hover { border-color: #00ffff; color: #00ffff; }
-.social-icon-box.linkedin-link:hover { border-color: #0077b5; color: #0077b5; }
-.social-icon-box.github-link:hover { border-color: #9d4edd; color: #9d4edd; }
+/* HIGH-TECH BRAND HOVER COLOR ENGINES */
+.social-icon-box.instagram-link:hover {
+    border-color: #f1167f !important;
+    color: #f1167f !important;
+    box-shadow: 0 0 12px rgba(241, 22, 127, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-icon-box.youtube-link:hover {
+    border-color: #ff0000 !important;
+    color: #ff0000 !important;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-icon-box.home-shortcut-link:hover {
+    border-color: #00ffff !important;
+    color: #00ffff !important;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
 
 .about-me-visual {
     flex-shrink: 0;
@@ -350,7 +370,7 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsiveness Media Breakpoints configurations */
+/* Responsiveness break thresholds */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
