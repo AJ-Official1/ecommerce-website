@@ -14,7 +14,7 @@ const myPythonLibrary = [
         photoUrl: "cool_effects.jpg", 
         fileLocation: "pyzone-marketplace/10_cool_effects.py" 
     },
-        {
+    {
         title: "Rock, Paper and Scissors", 
         description: "Rock Paper Scissors is a simple, two-player hand game of chance and strategy. Players simultaneously form one of three hand shapes", 
         installGuide: "pip install pygame", 
@@ -134,6 +134,10 @@ function setupSearch() {
 // Infinite Scrolling setup to seamlessly append items as you scroll down
 function setupInfiniteScroll() {
     window.addEventListener('scroll', () => {
+        // Only run infinite scroll checks if the Home page catalog is actually visible
+        const homeSection = document.getElementById('home-page-section');
+        if (homeSection && homeSection.classList.contains('hidden')) return;
+
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
             const catalogGrid = document.getElementById('catalog-grid');
             if (catalogGrid && catalogGrid.children.length < currentItems.length) {
@@ -143,9 +147,40 @@ function setupInfiniteScroll() {
     });
 }
 
+// Page Navigation Setup: Smoothly manages shifting visibility between independent sections
+function setupPageNavigation() {
+    const navHome = document.getElementById('nav-home');
+    const navAbout = document.getElementById('nav-about');
+    const homeSection = document.getElementById('home-page-section');
+    const aboutSection = document.getElementById('about-page-section');
+
+    if (!navHome || !navAbout || !homeSection || !aboutSection) return;
+
+    navHome.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Visual button adjustments
+        navHome.classList.add('active');
+        navAbout.classList.remove('active');
+        // Structural DOM changes
+        homeSection.classList.remove('hidden');
+        aboutSection.classList.add('hidden');
+    });
+
+    navAbout.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Visual button adjustments
+        navAbout.classList.add('active');
+        navHome.classList.remove('active');
+        // Structural DOM changes
+        aboutSection.classList.remove('hidden');
+        homeSection.classList.add('hidden');
+    });
+}
+
 // Initialize system engines
 window.onload = function() {
     loadCatalogItems();
     setupSearch();
     setupInfiniteScroll();
+    setupPageNavigation(); // Runs navigation listeners alongside your database card injection
 };
