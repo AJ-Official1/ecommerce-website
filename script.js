@@ -85,7 +85,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 <div class="card-title">${item.title}</div>
                 <div class="card-description">
                     ${item.description}
-                    <div style="margin-top: 10px; color: #00ffff; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">🔧 Initialize Setup:</div>
+                    <div style="margin-top: 10px; color: #00ffff; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">🔧 Setup:</div>
                     <code class="install-box">${item.installGuide}</code>
                 </div>
             </div>
@@ -129,8 +129,8 @@ function setupSearch() {
 // Infinite Scrolling setup
 function setupInfiniteScroll() {
     window.addEventListener('scroll', () => {
-        const homeSection = document.getElementById('home-page-section');
-        if (homeSection && homeSection.classList.contains('hidden')) return;
+        const homeContainer = document.getElementById('homeViewContainer');
+        if (homeContainer && homeContainer.classList.contains('hidden')) return;
 
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
             const catalogGrid = document.getElementById('catalog-grid');
@@ -141,41 +141,31 @@ function setupInfiniteScroll() {
     });
 }
 
-// MANDATORY SECTION VIEW SWITCHING FUNCTIONS WITH LIVE SEARCH CONTAINER VISIBILITY MANAGER
+// BULLETPROOF VIEW ENGINE MANAGEMENT SWITCHING LOGIC: TOGGLES PARENT CONTAINERS RATHER THAN FRAGMENTS
 function switchToHomeView() {
-    const homeSection = document.getElementById('home-page-section');
-    const aboutSection = document.getElementById('about-page-section');
+    const homeBox = document.getElementById('homeViewContainer');
+    const aboutBox = document.getElementById('aboutViewContainer');
     const searchWrapper = document.getElementById('mainSearchWrapper');
     
     document.getElementById('navHomeLink').classList.add('active');
     document.getElementById('navAboutLink').classList.remove('active');
     
-    aboutSection.classList.add('hidden');
-    homeSection.classList.remove('hidden');
-    
+    if (aboutBox) aboutBox.classList.add('hidden');
+    if (homeBox) homeBox.classList.remove('hidden');
     if (searchWrapper) searchWrapper.classList.remove('hidden-search');
-    
-    homeSection.classList.remove('page-transition-active');
-    void homeSection.offsetWidth; 
-    homeSection.classList.add('page-transition-active');
 }
 
 function switchToAboutView() {
-    const homeSection = document.getElementById('home-page-section');
-    const aboutSection = document.getElementById('about-page-section');
+    const homeBox = document.getElementById('homeViewContainer');
+    const aboutBox = document.getElementById('aboutViewContainer');
     const searchWrapper = document.getElementById('mainSearchWrapper');
     
     document.getElementById('navAboutLink').classList.add('active');
     document.getElementById('navHomeLink').classList.remove('active');
     
-    homeSection.classList.add('hidden');
-    aboutSection.classList.remove('hidden');
-    
+    if (homeBox) homeBox.classList.add('hidden');
+    if (aboutBox) aboutBox.classList.remove('hidden');
     if (searchWrapper) searchWrapper.classList.add('hidden-search');
-    
-    aboutSection.classList.remove('page-transition-active');
-    void aboutSection.offsetWidth; 
-    aboutSection.classList.add('page-transition-active');
 }
 
 function setupSinglePageNavigation() {
