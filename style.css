@@ -229,6 +229,13 @@ body.amazon-dark {
     padding-bottom: 12px;
 }
 
+.section-title-wrap.heading-fix {
+    display: block;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+
 .section-heading {
     font-size: 22px;
     font-weight: 700;
@@ -370,15 +377,17 @@ body.amazon-dark {
     font-size: 42px;
     font-weight: 800;
     color: #ffffff;
-    padding-bottom: 5px;
     letter-spacing: 0.5px;
+    display: block;
 }
 
-.about-me-heading span {
+.about-me-heading .gradient-text {
+    display: inline-block;
     background: linear-gradient(135deg, #ff007f, #9d4edd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.3));
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text;
+    color: transparent;
 }
 
 .developer-display-name {
@@ -460,22 +469,4 @@ body.amazon-dark {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-}
-
-/* Mobile Media Queries */
-@media (max-width: 850px) {
-    .about-me-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 60px;
-    }
-    .about-social-links {
-        justify-content: center;
-    }
-    .header-search {
-        margin: 0 15px;
-    }
-    .header-right-text {
-        display: none;
-    }
 }
