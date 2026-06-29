@@ -1,4 +1,4 @@
-// Active Library Database Source Repository
+// Database Source Repository list tracking arrays
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -26,7 +26,7 @@ const myPythonLibrary = [
 let currentItems = [...myPythonLibrary];
 let itemsToDisplay = 20; 
 
-// Dynamic hard-drive anchor download forcing sequences
+// High-performance file downloader that forces a save prompt
 async function forceFileDownload(fileUrl, fileName) {
     try {
         const response = await fetch(fileUrl);
@@ -52,7 +52,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard marketplace display structures into display blocks
+// Injects standard grid card components
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -64,7 +64,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     }
 
     if (currentItems.length === 0) {
-        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px;">No matching core scripts located.</p>';
+        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px;">No records located.</p>';
         return;
     }
 
@@ -136,7 +136,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// Master tab switching container management systems toggles layout wrappers fully
+// SECURE EVENT HANDLERS EXPLICITLY BINDS TO CORRECT ID PATH STRINGS
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
