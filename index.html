@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyStore | Futuristic Cyber Hub</title>
-    <!-- Changing ?v=9.0 completely breaks the browser cache lock and forces a color refresh -->
-    <link rel="stylesheet" href="style.css?v=9.0">
-    <!-- FontAwesome required for the brand/social icons -->
+    <!-- Query version stamp forces computer engines to bypass past broken memory tracks -->
+    <link rel="stylesheet" href="style.css?v=25.0">
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="amazon-dark">
 
-    <!-- Amazon Dark Navigation Bar Header -->
+    <!-- Header Navigation Shell -->
     <header class="amazon-header">
         <div class="logo-wrapper" id="headerLogoBtn">
-            <!-- Brand Icon Logo SVG -->
             <svg class="header-brand-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="#9d4edd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00ffff" stroke-width="2"/>
+                <path d="M2 17L12 22L22 17" stroke="#ff007f" stroke-width="2"/>
+                <path d="M2 12L12 17L22 12" stroke="#9d4edd" stroke-width="2"/>
             </svg>
             <div class="header-logo">PyStore<span>.com</span></div>
         </div>
@@ -30,68 +28,67 @@
         <div class="header-right-text">System Core Manager</div>
     </header>
 
-    <!-- Amazon Style Sub-Navigation Bar Layout -->
+    <!-- Isolated Subnavigation Panel Strip -->
     <nav class="amazon-sub-nav">
         <div class="sub-nav-all-btn">
             <span class="hamburger-icon">☰</span>
             <span class="all-text">All Systems</span>
         </div>
-        <!-- Safe navigation elements using clear classes -->
         <a href="#" id="navHomeLink" class="sub-nav-link active">Home</a>
         <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
     </nav>
 
-    <!-- Page 1: Home View Page Grid Container -->
-    <main class="main-container" id="homeViewContainer">
-        <section id="home-page-section" class="view-section page-transition-active">
-            <div class="clean-section-header">
-                <h2 class="section-heading">Featured Core Files</h2>
-            </div>
-            <!-- The Full-Width Amazon Product Card Grid Layout -->
-            <div class="products-display-grid" id="catalog-grid">
-                <!-- JavaScript dynamically loads cards here -->
-            </div>
-        </section>
-    </main>
+    <!-- Page Content Core Modules -->
+    <main class="page-viewport-module">
+        
+        <!-- Tab Node 1: Product Grid Marketplace Catalog Layout -->
+        <div id="homeViewContainer" class="main-container">
+            <section id="home-page-section" class="view-section">
+                <div class="clean-section-header">
+                    <h2 class="section-heading">Featured Core Files</h2>
+                </div>
+                <div class="products-display-grid" id="catalog-grid">
+                    <!-- Dynamic data blocks compile via script execution loops -->
+                </div>
+            </section>
+        </div>
 
-    <!-- Page 2: About Developer View Container -->
-    <main class="main-container hidden" id="aboutViewContainer">
-        <section id="about-page-section" class="view-section page-transition-active">
-            <div class="about-me-container">
-                
-                <!-- Left Text and Social Icons Column -->
-                <div class="about-me-content">
-                    <div class="clean-section-header">
-                        <h2 class="about-me-heading">AJ Official</h2>
-                    </div>
-                    <h3 class="developer-display-name">Ajay Kumar</h3>
-                    <p class="about-me-text">
-                        Hi, I am a passionate Python developer dedicated to creating clean, efficient, and scalable scripts. Welcome to PyStore, where I share my premium code solutions to help you automate workflows and build powerful software applications.
-                    </p>
-                    <p class="about-me-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit necessitatibus velit ea obcaecati architecto provident placeat fugit suscipit, repellendus quo facilis quas.
-                    </p>
+        <!-- Tab Node 2: About Me Professional Developer Card Layout -->
+        <div id="aboutViewContainer" class="main-container hidden">
+            <section id="about-page-section" class="view-section">
+                <div class="about-me-container">
                     
-                    <!-- Outlined Portfolio Badges -->
-                    <div class="about-social-links">
-                        <a href="#" class="social-icon-box site-link" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="#" class="social-icon-box linkedin-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon-box github-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <div class="about-me-content">
+                        <div class="clean-section-header">
+                            <h2 class="about-me-heading">AJ Official</h2>
+                        </div>
+                        <h3 class="developer-display-name">Ajay Kumar</h3>
+                        <p class="about-me-text">
+                            Hi, I am a passionate Python developer dedicated to creating clean, efficient, and scalable scripts. Welcome to PyStore, where I share my premium code solutions to help you automate workflows and build powerful software applications.
+                        </p>
+                        <p class="about-me-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit necessitatibus velit ea obcaecati architecto provident placeat fugit suscipit, repellendus quo facilis quas.
+                        </p>
+                        
+                        <div class="about-social-links">
+                            <a href="#" class="social-icon-box site-link" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="social-icon-box linkedin-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon-box github-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Right Styled Portrait Column Frame -->
-                <div class="about-me-visual">
-                    <div class="portrait-yellow-card">
-                        <img src="profile.jpg" alt="Ajay Kumar Profile Picture" class="portrait-img" onerror="this.style.opacity='0';">
+                    <div class="about-me-visual">
+                        <div class="portrait-yellow-card">
+                            <img src="profile.jpg" alt="Ajay Kumar Profile Picture" class="portrait-img" onerror="this.style.opacity='0';">
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
+
     </main>
 
-    <!-- Changing ?v=9.0 ensures the script engine drops old logic structures -->
-    <script src="script.js?v=9.0"></script>
+    <script src="script.js?v=25.0"></script>
 </body>
 </html>
