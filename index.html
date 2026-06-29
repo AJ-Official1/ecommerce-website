@@ -11,21 +11,49 @@
     <!-- Amazon Dark Navigation Bar Header -->
     <header class="amazon-header">
         <div class="header-logo">PyStore<span>.com</span></div>
+        
+        <!-- Amazon Style Navigation Links -->
+        <nav class="header-nav-links">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#about-developer" class="nav-link">About Developer</a>
+        </nav>
+
         <div class="header-search">
             <input type="text" id="searchInput" placeholder="Search premium Python scripts...">
-            <button class="search-icon-btn">&#128269;</button>
+            <button class="search-icon-btn">🔍</button>
         </div>
         <div class="header-right-text">Script Manager</div>
     </header>
 
     <!-- Main Content Container Grid -->
     <main class="main-container">
-        <h2 class="section-heading">Featured Python Files</h2>
         
-        <!-- The Full-Width Amazon Product Card Grid Layout -->
-        <div class="products-display-grid" id="catalog-grid">
-            <!-- JavaScript dynamically loads cards here -->
-        </div>
+        <!-- Featured Products Section -->
+        <section id="home-section">
+            <h2 class="section-heading">Featured Python Files</h2>
+            <!-- The Full-Width Amazon Product Card Grid Layout -->
+            <div class="products-display-grid" id="catalog-grid">
+                <!-- JavaScript dynamically loads cards here -->
+            </div>
+        </section>
+
+        <!-- About Developer Section -->
+        <section id="about-developer" class="developer-section">
+            <h2 class="section-heading">About Developer</h2>
+            <div class="developer-card">
+                <div class="developer-image-container">
+                    <!-- Replace 'your-picture.jpg' with your actual image file path -->
+                    <img src="your-picture.jpg" alt="Developer Profile Picture" class="developer-image">
+                </div>
+                <div class="developer-info">
+                    <h3 class="developer-name">Your Name</h3>
+                    <p class="developer-description">
+                        Hi, I am a passionate Python developer dedicated to creating clean, efficient, and scalable scripts. Welcome to PyStore, where I share my premium code solutions to help you automate workflows and build powerful software applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
