@@ -66,10 +66,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     }
 
     if (currentItems.length === 0) {
-        catalogGrid.innerHTML = `
-            <p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px; border: 1px dashed #1f2d3d; border-radius: 8px;">
-                No matching terminal records located in active memory database.
-            </p>`;
+        catalogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #8fa0b5; padding: 40px; border: 1px dashed #1f2d3d; border-radius: 8px;">No records located.</p>';
         return;
     }
 
@@ -82,7 +79,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#05070a; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #161f30;">
-                        File Text Preview
+                        Preview Content
                     </div>
                 </div>
                 <div class="card-title">${item.title}</div>
@@ -93,7 +90,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 </div>
             </div>
             <button onclick="forceFileDownload('${item.fileLocation}', '${item.fileLocation}')" class="amazon-download-button">
-                Download .py File
+                Download Script
             </button>
         </div>
     `).join('');
