@@ -82,7 +82,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
                 <div class="card-image-box">
                     <img src="${item.photoUrl ? item.photoUrl : ''}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-fallback" style="display:none; width:100%; height:100%; background:#05070a; color:#00ffff; align-items:center; justify-content:center; text-align:center; font-weight:bold; font-size:14px; padding:15px; font-family:monospace; border: 1px solid #161f30;">
-                        &lt; ${item.title} /&gt;
+                        File Text Preview
                     </div>
                 </div>
                 <div class="card-title">${item.title}</div>
@@ -101,7 +101,7 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     catalogGrid.insertAdjacentHTML('beforeend', cardHTML);
 }
 
-// Debounce Filter: Prevents typing lagging across large lists
+// Debounce Filter
 function debounce(func, delay) {
     let timeoutTimer;
     return function (...args) {
@@ -110,7 +110,7 @@ function debounce(func, delay) {
     };
 }
 
-// Live real-time search configuration
+// Live search configuration
 function setupSearch() {
     const searchInput = document.getElementById('searchInput');
     if (!searchInput) return;
@@ -129,7 +129,7 @@ function setupSearch() {
     }, 200)); 
 }
 
-// Infinite Scrolling setup to seamlessly append items as you scroll down
+// Infinite Scrolling setup
 function setupInfiniteScroll() {
     window.addEventListener('scroll', () => {
         const homeSection = document.getElementById('home-page-section');
@@ -160,7 +160,6 @@ function switchToHomeView() {
     homeSection.classList.add('page-transition-active');
 }
 
-// Switches view tabs
 function switchToAboutView() {
     const homeSection = document.getElementById('home-page-section');
     const aboutSection = document.getElementById('about-page-section');
