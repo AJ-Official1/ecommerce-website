@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyStore | Your Python Library</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for the social media icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="amazon-dark">
 
@@ -22,36 +24,51 @@
 
     <!-- Amazon Style Sub-Navigation Bar -->
     <nav class="amazon-sub-nav">
-        <a href="#home-section" class="sub-nav-link active">Home</a>
-        <a href="#about-developer" class="sub-nav-link">About Developer</a>
+        <a href="#" id="nav-home" class="sub-nav-link active">Home</a>
+        <a href="#" id="nav-about" class="sub-nav-link">About Developer</a>
     </nav>
 
     <!-- Main Content Container Grid -->
     <main class="main-container">
         
-        <!-- Featured Products Section -->
-        <section id="home-section">
+        <!-- Home Section (Visible by default) -->
+        <section id="home-page-section" class="page-section">
             <h2 class="section-heading">Featured Python Files</h2>
-            <!-- The Full-Width Amazon Product Card Grid Layout -->
             <div class="products-display-grid" id="catalog-grid">
                 <!-- JavaScript dynamically loads cards here -->
             </div>
         </section>
 
-        <!-- About Developer Section -->
-        <section id="about-developer" class="developer-section">
-            <h2 class="section-heading">About Developer</h2>
-            <div class="developer-card">
-                <div class="developer-image-container">
-                    <!-- Replace with your actual image path (e.g., dev-photo.jpg) -->
-                    <img src="your-picture.jpg" alt="Developer Profile Picture" class="developer-image">
-                </div>
-                <div class="developer-info">
-                    <h3 class="developer-name">AJ Official</h3>
-                    <p class="developer-description">
+        <!-- About Developer Section (Hidden by default) -->
+        <section id="about-page-section" class="page-section hidden">
+            <div class="about-me-container">
+                
+                <!-- Left Text and Social Icons Column -->
+                <div class="about-me-content">
+                    <h2 class="about-me-heading">Sobre <span>mim</span></h2>
+                    <p class="about-me-text">
                         Hi, I am a passionate Python developer dedicated to creating clean, efficient, and scalable scripts. Welcome to PyStore, where I share my premium code solutions to help you automate workflows and build powerful software applications.
                     </p>
+                    <p class="about-me-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit necessitatibus velit ea obcaecati architecto provident placeat fugit suscipit, repellendus quo facilis quas.
+                    </p>
+                    
+                    <!-- Social Links -->
+                    <div class="about-social-links">
+                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon-box" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
+
+                <!-- Right Styled Portrait Column -->
+                <div class="about-me-visual">
+                    <div class="portrait-yellow-card">
+                        <!-- Replace with your actual picture filename -->
+                        <img src="your-picture.jpg" alt="AJ Official Profile Picture" class="portrait-img">
+                    </div>
+                </div>
+
             </div>
         </section>
 
