@@ -23,7 +23,6 @@ const myPythonLibrary = [
     }
 ];
 
-// Pagination Settings for Handling Large Quantities of Files
 let currentItems = [...myPythonLibrary];
 let itemsToDisplay = 20; 
 
@@ -98,7 +97,6 @@ function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     catalogGrid.insertAdjacentHTML('beforeend', cardHTML);
 }
 
-// Debounce Filter
 function debounce(func, delay) {
     let timeoutTimer;
     return function (...args) {
@@ -107,7 +105,6 @@ function debounce(func, delay) {
     };
 }
 
-// Live search configuration
 function setupSearch() {
     const searchInput = document.getElementById('searchInput');
     if (!searchInput) return;
@@ -126,7 +123,6 @@ function setupSearch() {
     }, 200)); 
 }
 
-// Infinite Scrolling setup
 function setupInfiniteScroll() {
     window.addEventListener('scroll', () => {
         const homeContainer = document.getElementById('homeViewContainer');
@@ -141,7 +137,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// BULLETPROOF VIEW ENGINE MANAGEMENT SWITCHING LOGIC: TOGGLES PARENT CONTAINERS RATHER THAN FRAGMENTS
+// PROTECTED SWITCH ENGING TRANSITIONS PREVENTS OVERLAP CLIPS
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -194,7 +190,6 @@ function setupSinglePageNavigation() {
     }
 }
 
-// Initialize system engines
 window.onload = function() {
     loadCatalogItems();
     setupSearch();
