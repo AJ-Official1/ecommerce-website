@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyStore | Futuristic Cyber Hub</title>
-    <!-- Increment version to v=7.0 to bypass old browser layout cache -->
-    <link rel="stylesheet" href="style.css?v=7.0">
+    <!-- Changing ?v=9.0 completely breaks the browser cache lock and forces a color refresh -->
+    <link rel="stylesheet" href="style.css?v=9.0">
     <!-- FontAwesome required for the brand/social icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
@@ -36,7 +36,7 @@
             <span class="hamburger-icon">☰</span>
             <span class="all-text">All Systems</span>
         </div>
-        <!-- Safe segregated navigation links mapping IDs -->
+        <!-- Safe navigation elements using clear classes -->
         <a href="#" id="navHomeLink" class="sub-nav-link active">Home</a>
         <a href="#" id="navAboutLink" class="sub-nav-link">About Developer</a>
     </nav>
@@ -91,6 +91,7 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Changing ?v=9.0 ensures the script engine drops old logic structures -->
+    <script src="script.js?v=9.0"></script>
 </body>
 </html>
