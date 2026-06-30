@@ -304,14 +304,12 @@ body.amazon-dark {
     margin-bottom: 15px;
 }
 
-/* Custom Interactive Links Rows Sizing */
 .about-social-links {
     display: flex;
     gap: 15px;
     margin-top: 25px;
 }
 
-/* CONSTANT NEON HOVER SHINE DESIGN SPECIFICATION PROFILES */
 .social-icon-box {
     width: 50px;
     height: 48px;
@@ -329,7 +327,7 @@ body.amazon-dark {
     height: 22px;
 }
 
-/* INSTAGRAM: Permanent Pink Cyber Glow profile configurations */
+/* INSTAGRAM Neon Glow Profile */
 .social-icon-box.instagram-link {
     border-color: #ff007f;
     color: #ff007f !important;
@@ -341,7 +339,7 @@ body.amazon-dark {
     transform: translateY(-3px);
 }
 
-/* YOUTUBE: Permanent Laser Red profile layout configurations */
+/* YOUTUBE Laser Crimson Profile */
 .social-icon-box.youtube-link {
     border-color: #ff3333;
     color: #ff3333 !important;
@@ -353,7 +351,7 @@ body.amazon-dark {
     transform: translateY(-3px);
 }
 
-/* HOME SHORTCUT: Permanent Cyan Glow layout configurations */
+/* HOME SHORTCUT Electric Cyan Profile */
 .social-icon-box.home-shortcut-link {
     border-color: #00ffff;
     color: #00ffff !important;
@@ -388,7 +386,6 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsiveness adjustments */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
