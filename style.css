@@ -157,7 +157,8 @@ body.amazon-dark {
 .sub-nav-link.active {
     font-weight: 700;
     color: #ffffff;
-    background-color: #ff007f;
+    background: #ff007f;
+    border-radius: 4px;
 }
 
 .clean-section-header {
@@ -303,7 +304,7 @@ body.amazon-dark {
     margin-bottom: 15px;
 }
 
-/* Custom Interactive Links Box colors */
+/* Custom Interactive Links Box layout */
 .about-social-links {
     display: flex;
     gap: 15px;
@@ -311,17 +312,23 @@ body.amazon-dark {
 }
 
 .social-icon-box {
-    width: 46px;
+    width: 44px;
     height: 44px;
     border: 1.5px solid #1a2336;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff !important; /* Explicit tracking color fix sets fonts to solid visible white profiles */
-    font-size: 18px;
+    color: #ffffff !important; /* Forces solid white default look */
     background-color: #0d121f;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Strict layout configurations for native inline SVGs sizing */
+.native-svg-icon {
+    width: 20px;
+    height: 20px;
+    transition: stroke 0.2s, fill 0.2s;
 }
 
 /* VIVID INTERACTIVE SOCIAL BADGE LIGHT TRANSITIONS ON HOVER CLICKS */
@@ -329,21 +336,21 @@ body.amazon-dark {
     border-color: #f1167f !important;
     color: #f1167f !important;
     box-shadow: 0 0 12px rgba(241, 22, 127, 0.4);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .social-icon-box.youtube-link:hover {
     border-color: #ff0000 !important;
     color: #ff0000 !important;
     box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .social-icon-box.home-shortcut-link:hover {
     border-color: #00ffff !important;
     color: #00ffff !important;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .about-me-visual {
@@ -367,21 +374,4 @@ body.amazon-dark {
     object-fit: cover;
     position: absolute;
     bottom: 0;
-}
-
-/* Responsiveness Media Breakpoints */
-@media (max-width: 850px) {
-    .about-me-container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .about-social-links {
-        justify-content: center;
-    }
-    .header-search {
-        margin: 0 15px;
-    }
-    .header-right-text {
-        display: none;
-    }
 }
