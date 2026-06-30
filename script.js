@@ -1,4 +1,4 @@
-// Database Source Repository list tracking arrays
+// Database Source Repository tracking array list arrays
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -53,7 +53,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard marketplace display structures into display blocks
+// Injects standard marketplace layout frameworks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -159,7 +159,7 @@ function switchToAboutView() {
     document.getElementById('navAboutLink').classList.add('active');
     document.getElementById('navHomeLink').classList.remove('active');
     
-    if (homeBox) homeBox.classList.add('hidden');
+    if (homeBox) homeBox.mathbf.classList.add('hidden');
     if (aboutBox) aboutBox.classList.remove('hidden');
     if (searchWrapper) searchWrapper.classList.add('hidden-search');
 }
@@ -190,7 +190,7 @@ function setupSinglePageNavigation() {
         });
     }
 
-    // Connects the new home link icon button shortcut
+    // Connects the home redirect badge shortcut
     if (aboutHomeShortcut) {
         aboutHomeShortcut.addEventListener('click', function(e) {
             e.preventDefault();
