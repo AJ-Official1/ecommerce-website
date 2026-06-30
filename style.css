@@ -117,7 +117,7 @@ body.amazon-dark {
     flex-shrink: 0;
 }
 
-/* Subnavigation Menu navigation block layout configurations */
+/* Subnavigation Menu layout configurations */
 .amazon-sub-nav {
     background-color: #0b0f19;
     padding: 10px 20px;
@@ -172,7 +172,7 @@ body.amazon-dark {
     color: #ffffff;
 }
 
-/* Marketplace Products Grid matrix configurations */
+/* Marketplace Products Matrix Layout configurations */
 .products-display-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -304,52 +304,64 @@ body.amazon-dark {
     margin-bottom: 15px;
 }
 
-/* Custom Interactive Links Box layout */
+/* Custom Interactive Links Rows Sizing */
 .about-social-links {
     display: flex;
     gap: 15px;
     margin-top: 25px;
 }
 
+/* HIGH-FIDELITY NEON LIGHT ACCENTS CONSTANTLY LUMINOUS FROM INCEPTION */
 .social-icon-box {
-    width: 44px;
-    height: 44px;
-    border: 1.5px solid #1a2336;
-    border-radius: 8px;
+    width: 50px;
+    height: 48px;
+    border: 1.5px solid #161f30;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff !important; /* Forces solid white default look */
     background-color: #0d121f;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Strict layout configurations for native inline SVGs sizing */
 .native-svg-icon {
-    width: 20px;
-    height: 20px;
-    transition: stroke 0.2s, fill 0.2s;
+    width: 22px;
+    height: 22px;
 }
 
-/* VIVID INTERACTIVE SOCIAL BADGE LIGHT TRANSITIONS ON HOVER CLICKS */
+/* INSTAGRAM: Dynamic Neon Pink/Magenta Glow Constant Look */
+.social-icon-box.instagram-link {
+    border-color: #ff007f;
+    color: #ff007f !important;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+}
+
 .social-icon-box.instagram-link:hover {
-    border-color: #f1167f !important;
-    color: #f1167f !important;
-    box-shadow: 0 0 12px rgba(241, 22, 127, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
     transform: translateY(-3px);
+}
+
+/* YOUTUBE: Rich Laser Crimson Red Constant Look */
+.social-icon-box.youtube-link {
+    border-color: #ff3333;
+    color: #ff3333 !important;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
 }
 
 .social-icon-box.youtube-link:hover {
-    border-color: #ff0000 !important;
-    color: #ff0000 !important;
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.6);
     transform: translateY(-3px);
 }
 
-.social-icon-box.home-shortcut-link:hover {
-    border-color: #00ffff !important;
+/* HOME BASE: Cyber Electric Cyan Blue Constant Look */
+.social-icon-box.home-shortcut-link {
+    border-color: #00ffff;
     color: #00ffff !important;
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.social-icon-box.home-shortcut-link:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
     transform: translateY(-3px);
 }
 
@@ -374,4 +386,21 @@ body.amazon-dark {
     object-fit: cover;
     position: absolute;
     bottom: 0;
+}
+
+/* Responsiveness thresholds */
+@media (max-width: 850px) {
+    .about-me-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about-social-links {
+        justify-content: center;
+    }
+    .header-search {
+        margin: 0 15px;
+    }
+    .header-right-text {
+        display: none;
+    }
 }
