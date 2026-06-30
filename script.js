@@ -1,4 +1,3 @@
-// Database Source Repository arrays lists tracking records
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -26,7 +25,6 @@ const myPythonLibrary = [
 let currentItems = [...myPythonLibrary];
 let itemsToDisplay = 20; 
 
-// High-performance file downloader that forces a save prompt
 async function forceFileDownload(fileUrl, fileName) {
     try {
         const response = await fetch(fileUrl);
@@ -45,7 +43,6 @@ async function forceFileDownload(fileUrl, fileName) {
         document.body.removeChild(hiddenAnchor);
         window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
-        console.error("Download fallback triggered:", error);
         const fallbackAnchor = document.createElement('a');
         fallbackAnchor.href = fileUrl;
         fallbackAnchor.download = fileName.split('/').pop();
@@ -53,7 +50,6 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard marketplace display structures into display blocks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -137,7 +133,6 @@ function setupInfiniteScroll() {
     });
 }
 
-// Master single page viewport tab layout panel switches logic controls
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -151,6 +146,7 @@ function switchToHomeView() {
     if (searchWrapper) searchWrapper.classList.remove('hidden-search');
 }
 
+// FIXED SWITCH TRIGGER: TYPO REMOVED PERMANENTLY TO PREVENT JAVASCRIPT ENGINE CRASHES
 function switchToAboutView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -190,7 +186,6 @@ function setupSinglePageNavigation() {
         });
     }
 
-    // Connects the home shortcut button element
     if (aboutHomeShortcut) {
         aboutHomeShortcut.addEventListener('click', function(e) {
             e.preventDefault();
