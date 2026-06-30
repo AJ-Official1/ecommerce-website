@@ -146,7 +146,7 @@ function switchToHomeView() {
     if (searchWrapper) searchWrapper.classList.remove('hidden-search');
 }
 
-// FIXED SWITCH TRIGGER: TYPO REMOVED PERMANENTLY TO PREVENT JAVASCRIPT ENGINE CRASHES
+// FIXED SWITCH TRIGGER: Syntax error resolved permanently to allow full view transitions
 function switchToAboutView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
