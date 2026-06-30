@@ -311,7 +311,7 @@ body.amazon-dark {
     margin-top: 25px;
 }
 
-/* HIGH-FIDELITY NEON LIGHT ACCENTS CONSTANTLY LUMINOUS FROM INCEPTION */
+/* CONSTANT NEON HOVER SHINE DESIGN SPECIFICATION PROFILES */
 .social-icon-box {
     width: 50px;
     height: 48px;
@@ -329,7 +329,7 @@ body.amazon-dark {
     height: 22px;
 }
 
-/* INSTAGRAM: Dynamic Neon Pink/Magenta Glow Constant Look */
+/* INSTAGRAM: Permanent Pink Cyber Glow profile configurations */
 .social-icon-box.instagram-link {
     border-color: #ff007f;
     color: #ff007f !important;
@@ -341,7 +341,7 @@ body.amazon-dark {
     transform: translateY(-3px);
 }
 
-/* YOUTUBE: Rich Laser Crimson Red Constant Look */
+/* YOUTUBE: Permanent Laser Red profile layout configurations */
 .social-icon-box.youtube-link {
     border-color: #ff3333;
     color: #ff3333 !important;
@@ -353,7 +353,7 @@ body.amazon-dark {
     transform: translateY(-3px);
 }
 
-/* HOME BASE: Cyber Electric Cyan Blue Constant Look */
+/* HOME SHORTCUT: Permanent Cyan Glow layout configurations */
 .social-icon-box.home-shortcut-link {
     border-color: #00ffff;
     color: #00ffff !important;
@@ -388,7 +388,7 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsiveness thresholds */
+/* Responsiveness adjustments */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
