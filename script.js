@@ -1,4 +1,4 @@
-// Database Source Repository arrays lists tracking records
+// Database Source Repository tracking array arrays lists
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -52,7 +52,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard marketplace display structures into display blocks
+// Injects standard marketplace layout frameworks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -136,7 +136,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// Master single page viewport tab layout panel switches logic controls
+// Master Single Page tab navigation triggers controls 
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -189,7 +189,7 @@ function setupSinglePageNavigation() {
         });
     }
 
-    // Binds the new profile view third home action badge item to clear screen filters
+    // Active connection binding maps the third home box link icon to switch view matrices seamlessly
     if (aboutHomeShortcut) {
         aboutHomeShortcut.addEventListener('click', function(e) {
             e.preventDefault();
