@@ -1,4 +1,4 @@
-// Database Source Repository tracking array arrays lists
+// Database Source Repository list tracking arrays
 const myPythonLibrary = [
     {
         title: "Offline AI Script Engine", 
@@ -45,6 +45,7 @@ async function forceFileDownload(fileUrl, fileName) {
         document.body.removeChild(hiddenAnchor);
         window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
+        console.error("Download fallback triggered:", error);
         const fallbackAnchor = document.createElement('a');
         fallbackAnchor.href = fileUrl;
         fallbackAnchor.download = fileName.split('/').pop();
@@ -52,7 +53,7 @@ async function forceFileDownload(fileUrl, fileName) {
     }
 }
 
-// Injects standard marketplace layout frameworks
+// Injects standard marketplace display structures into display blocks
 function loadCatalogItems(filteredItems = myPythonLibrary, append = false) {
     const catalogGrid = document.getElementById('catalog-grid');
     if (!catalogGrid) return;
@@ -136,7 +137,7 @@ function setupInfiniteScroll() {
     });
 }
 
-// Master Single Page tab navigation triggers controls 
+// Master single page viewport tab layout panel switches logic controls
 function switchToHomeView() {
     const homeBox = document.getElementById('homeViewContainer');
     const aboutBox = document.getElementById('aboutViewContainer');
@@ -189,7 +190,7 @@ function setupSinglePageNavigation() {
         });
     }
 
-    // Active connection binding maps the third home box link icon to switch view matrices seamlessly
+    // Connects the new home link icon button shortcut
     if (aboutHomeShortcut) {
         aboutHomeShortcut.addEventListener('click', function(e) {
             e.preventDefault();
