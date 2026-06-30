@@ -117,7 +117,7 @@ body.amazon-dark {
     flex-shrink: 0;
 }
 
-/* Subnavigation Menu panel layout */
+/* Subnavigation Menu navigation block layout configurations */
 .amazon-sub-nav {
     background-color: #0b0f19;
     padding: 10px 20px;
@@ -171,7 +171,7 @@ body.amazon-dark {
     color: #ffffff;
 }
 
-/* Marketplace Matrix Layout configurations */
+/* Marketplace Products Grid matrix configurations */
 .products-display-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -268,7 +268,7 @@ body.amazon-dark {
     color: #05070a;
 }
 
-/* Profile Section Layout Configuration */
+/* Profile Visual Components Container Framework Layout */
 .about-me-container {
     display: flex;
     align-items: center;
@@ -303,29 +303,28 @@ body.amazon-dark {
     margin-bottom: 15px;
 }
 
-/* Social Badges Grid Array Layout wrapper */
+/* Custom Interactive Links Box colors */
 .about-social-links {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     margin-top: 25px;
 }
 
 .social-icon-box {
-    width: 44px;
+    width: 46px;
     height: 44px;
     border: 1.5px solid #1a2336;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8292a6;
-    text-decoration: none;
+    color: #ffffff !important; /* Explicit tracking color fix sets fonts to solid visible white profiles */
     font-size: 18px;
     background-color: #0d121f;
     transition: all 0.25s ease;
 }
 
-/* HIGH-TECH BRAND HOVER COLOR ENGINES */
+/* VIVID INTERACTIVE SOCIAL BADGE LIGHT TRANSITIONS ON HOVER CLICKS */
 .social-icon-box.instagram-link:hover {
     border-color: #f1167f !important;
     color: #f1167f !important;
@@ -370,7 +369,7 @@ body.amazon-dark {
     bottom: 0;
 }
 
-/* Responsiveness break thresholds */
+/* Responsiveness Media Breakpoints */
 @media (max-width: 850px) {
     .about-me-container {
         flex-direction: column-reverse;
