@@ -310,6 +310,7 @@ body.amazon-dark {
     margin-top: 25px;
 }
 
+/* CONSTANT LUMINOUS ACCENTS */
 .social-icon-box {
     width: 50px;
     height: 48px;
@@ -327,7 +328,7 @@ body.amazon-dark {
     height: 22px;
 }
 
-/* INSTAGRAM Neon Glow Profile */
+/* INSTAGRAM Luminous Magenta Aura Profile */
 .social-icon-box.instagram-link {
     border-color: #ff007f;
     color: #ff007f !important;
@@ -339,7 +340,7 @@ body.amazon-dark {
     transform: translateY(-3px);
 }
 
-/* YOUTUBE Laser Crimson Profile */
+/* YOUTUBE Luminous Crimson Profile */
 .social-icon-box.youtube-link {
     border-color: #ff3333;
     color: #ff3333 !important;
